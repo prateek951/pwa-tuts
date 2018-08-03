@@ -8,3 +8,22 @@ visit the webpage
 So for PWAs we want an icon to the home screen to directly launch 
 web application to drive user engagement and what app manifest allows 
 us to do 
+
+Manifest properties 
+
+{ 
+    
+    "name" : "Sweaty - Activity Tracker" Long name of application(Splash Screen)
+    "short_name": "sweatv",
+    "start_url": "/index.html"  Which page to load on startup 
+    "scope": "."                Which pages are included in PWA experience 
+    "display": "standalone",    Should it look like a standalone application 
+    "background_color": "#fff"  Background Color whilst loading and on splashscreen
+    "theme_color" : "#3f51b5"   Theme color on top bar in task switcher
+    "description": "Keep running until you are super sweaty"    Description of the application
+    "dir": "ltr"                Read direction of your application 
+    "lang": "en-US"             Main language of the application
+    "orientation": "portrait-primary"   Set and enforce default orientation 
+    "icons": [..]               Configure the icons
+    "related_applications": []     Set the native applications
+}   
