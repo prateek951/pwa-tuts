@@ -50,8 +50,13 @@ Background synchronisation      Suppose you issued a post request to store
                                 is restored the action is dispatched/emitted and the service
                                 worker can listen to the event then.
 
-Service worker lifecycle        Service worker phase changes
-            
+Service worker lifecycle        Service worker phase changes'
+
+
+This is not the javascript code that we want to run but the background process.
+
+
+
 
 
 
