@@ -1,0 +1,58 @@
+Service Workers 
+
+They do a lot of work behind the scenes
+
+Make our application work offline ready even in the absence of internet connection.
+
+They allow us to use most of the next generation features of modern web applications 
+like push notifications,background synchronisation 
+
+Service workers are also single threaded as they run in the background 
+and they are decoupled from the html pages .It is registered under HTML page 
+It has certain scope where it applies to (all pages of a domain)
+Service workers live even after all the pages have been closed in your application. 
+Service workers can listen to events emittted by the javascript code or raised from 
+the DOM or by some other server via the web push notifications.
+
+Sits there in background react to all kinds of incoming events like return cached 
+results
+
+Listenable Events in Service Workers
+
+Fetch       Browser or Page related JS initiates a fetch (http request)
+            We can react to that event using the service workers.Service workers
+            trigger the events when the fetch request occurs which goes through 
+            the service worker to the server and gets the data from the server.
+            Native XMLHttpRequest and the axios requests dont trigger the fetch 
+            events.Since most events go through the service workers, you can 
+            manipulate them, block them and control and cache them 
+
+Push notifications  Send from other server .These vendor service from the browser 
+                    sender will send you the push notification to the client 
+                    application running and can in Service Worker you can listen
+                    to the incoming push request.Service workers are running in  
+                    background 
+
+Notification interaction        User interacts with displayed notification 
+                                Service workers always run though the tab of
+                                browser may not run though.
+
+Background synchronisation      Suppose you issued a post request to store 
+                                some data on server and the internet connection 
+                                failed.In that case browsers with this feature 
+                                will preserve the action that causes this side 
+                                effect of posting data, and will initiate the action 
+                                once the connection is restored and establishes the 
+                                emission of event of Background Sync which the service 
+                                worker can listen once the connection is restored.
+
+                                That means the action is cached and once the connection 
+                                is restored the action is dispatched/emitted and the service
+                                worker can listen to the event then.
+
+Service worker lifecycle        Service worker phase changes
+            
+
+
+
+
