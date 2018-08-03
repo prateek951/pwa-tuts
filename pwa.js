@@ -42,6 +42,13 @@
 //Go to the network tab and tick the offline mode to check 
 //whether an application is a PWA or not
 
+//Lighthouse Chrome is the feature that Google gives to judge the performance 
+// of the PWA 
+
+// PWA percentage for app.ft.com is 73 percent around which can be checked in the audit section 
+   
+
+
 
 
 
