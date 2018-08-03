@@ -1,0 +1,92 @@
+Core building blocks of Service Workers
+
+//Cache offline support and enable PWA features
+
+//Background Sync user data in the background 
+
+//Enable push notifications 
+//Mobile like push notifications 
+
+//Application Building Blocks 
+
+//Allow addition to home screen 
+
+//Responsive Design App/layout should work and 
+//look good across devices
+
+//Media API access device camera and geolocation api 
+
+//PWA app uses service workers and application manifest
+
+//PWAs and Single Page Applications(SPAs)
+
+spa - Angular React Vue (fws rerender the dom all the time )
+
+SPA powered by Javascript Highly reactive
+only one HTML page is served by the server.
+
+PWA collection of tech independent of whether the application is 
+a single page application or not 
+
+Uses a lot of Javascript and frameworks
+
+Aims to have high reactivity 
+
+Can work with multiple files as well as single page applications 
+
+PWA concept can also be used on a single static page as well 
+
+Progressive Enhancement************************
+
+Progressively enhance the web application 
+
+Existing Legacy web application (old tech,maybe needs to support very old 
+browser)
+
+Existing Modern Application Modern Technology, only needs to support 
+modern browser 
+
+Upcoming Project can be turned into a pwa 
+
+Near Future
+
+Add some features of PWA into an existing application.
+Implement some core PWA features
+Fully implement as PWA from right to start 
+
+Future
+Use Multiple PWA features 
+Completely convert to PWA 
+
+COURSE OUTLINE FOR PWA COURSE
+
+Application Manifest Document which tells browser of your web application
+
+Service Workers 
+
+Promises and the Fetch API is used in a lot of service workers 
+
+Service Worker caching (offline access)
+
+Advanced Caching Strategies 
+
+Caching dynamic data with IndexedDB ( caching JSON data that we get back)
+ 
+Responsive Design 
+
+Background Synchronisation 
+Web push notifications 
+
+Media API (Camera) and the Geolocation API 
+
+Automated SW management 
+
+Integrate Angular Application to a PWA 
+
+Integrate React Application to a PWA
+
+Integrate Vue application to a PWA 
+
+
+
+
