@@ -1,0 +1,10 @@
+Web Application Manifest
+
+Make your web application installable 
+
+User just visits a webpage they have constantly enter the url to 
+visit the webpage 
+
+So for PWAs we want an icon to the home screen to directly launch 
+web application to drive user engagement and what app manifest allows 
+us to do 
