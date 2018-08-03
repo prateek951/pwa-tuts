@@ -47,6 +47,9 @@
 
 // PWA percentage for app.ft.com is 73 percent around which can be checked in the audit section 
    
+//Android Emulator supports all the features of the web application 
+
+
 
 
 
