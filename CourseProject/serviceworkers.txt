@@ -56,6 +56,49 @@ Service worker lifecycle        Service worker phase changes'
 This is not the javascript code that we want to run but the background process.
 
 
+Service Worker Lifecycle 
+
+index.html loads the app.js where you can register the service worker 
+in sw.js (content of sw.js is javascript dont fire it right now please take 
+it and register it as a background process as a service worker)
+During registration
+
+browser installs the service worker and emits the Install Event which we 
+can hook it into inside when it is getting installed 
+After installation service worker gets activated might not right after the  
+installation depends whether an old version of the service worker is running 
+In that case activate Event is fired. Service worker now controls all the pages 
+of scope 
+
+Browser will install the service worker update to be precise if its a 
+new version of the service worker Otherwise if there are no changes in the 
+file it wont go for installation phase and not on every page refresh 
+
+Idle Since its a background process, if no events are coming in it will stay 
+idle 
+
+After this it will get terminated(Events will wake up the service worker)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
