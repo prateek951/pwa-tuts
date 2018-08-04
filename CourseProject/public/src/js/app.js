@@ -1,4 +1,5 @@
 /*Check kro whether the service worker feature exists in the web browser*/
+var deferredPrompt;
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
@@ -6,5 +7,11 @@ if ("serviceWorker" in navigator) {
     .then(function() {
       console.log("Service worker registered");
     });
-} else {
 }
+
+window.addEventListener("beforeinstallprompt", function(event) {
+  console.log("beforeInstallPrompt fired");
+  event.preventDefault();
+  deferredPrompt = event;
+  return false;
+});
