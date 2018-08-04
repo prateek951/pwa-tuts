@@ -90,6 +90,8 @@ can be made easy.
 
 Service workers have a lot of power and served on secure applications.
 
+Service Workers require SSL and HTTPS 
+
 
 
 
