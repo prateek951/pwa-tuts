@@ -80,7 +80,15 @@ idle
 After this it will get terminated(Events will wake up the service worker)
 
 
+Service Workers
 
+Service workers is now supported in all the browsers
+
+Service worker is only served in case of HTTPS and not http
+as well as on localhost only for the reason so that the development process 
+can be made easy.
+
+Service workers have a lot of power and served on secure applications.
 
 
 
