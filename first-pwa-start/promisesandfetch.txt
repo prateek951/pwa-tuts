@@ -1,0 +1,150 @@
+Fetch data from the server 
+
+Generic long running operation 
+
+Wait 3 seconds timeout 
+
+Javascript is single threaded
+
+
+Promises basics 
+Promises are a new features of ES6. 
+
+Creating a new Promise 
+
+var pr = new Promise((resolve,reject) => {
+    //resolve to a value 
+    setTimeout(() => {
+        resolve('This is executed once the timer is done');
+    },3000);
+    //reject an error 
+
+    //Always give a result under all the circumstances 
+})
+
+pr.then(text => console.log(text)).catch(err => console.log(err));
+
+For multiple async tasks chains we will prefer to use async promises 
+instead of callbacks 
+
+Your promise could actually fail as well 
+
+For rejecting the promises we have another piece of code with us 
+
+
+var pr = new Promise((resolve,reject) => {
+    {% comment %} reject('This is not working'); {% endcomment %}
+    //You can pass an object into the call to reject 
+    reject({code : 500, message : 'An error occured'})
+});
+
+Using the catch way 
+pr.catch(err => console.log(err.code,err.message));
+
+Using the second argument in then 
+
+pr.then(data => console.log(data),err => console.log(err.code,err.message))
+
+Catch will catch any error prior to occurence of the catch block 
+
+Fetch is a method in your browser and it has a decent support in the browsers 
+
+HTTP requests are sent using Fetch as well which under the hood does 
+the XHR 
+
+Sending the GET requests using the fetch api as well 
+
+fetch('https://httpbin.org/ip')
+.then(function(response) {
+    console.log(response);
+    return response.json()
+}).then(function(data) {
+    console.log(data);
+}).catch(function(err) {
+    console.log(err);
+})
+
+Sending the POST requests using the fetch api 
+
+fetch('https://httpbin.org/post',{
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept' : 'application/json'
+    },
+    body: JSON.stringify({
+        message: 'Does this work?'
+    })
+})
+.then(function(response) {
+    return response.json()
+}).then(function(data) {
+    console.log(data);
+}).catch(function(err) {
+    console.log(err);
+})
+
+
+FETCH AND CORS 
+WHILE SENDING ANY REQUEST( VERY VERY VERY VERY VERY VERY VERY VERY IMPORTANT!!!!!)
+mode: 'cors'
+
+Comparing Fetch and AJAX 
+
+Sending the same request using the AJAX
+
+var xhr = new XMLHttpRequest();
+
+xhr.open('GET','https://httpbin.org/ip')
+
+xhr.responseType = 'json';
+
+xhr.onload = function() {
+    console.log(xhr.response);
+}
+xhr.onerror = function() {
+    console.log('Error!');
+}
+xhr.send();
+
+Service workers allow only the async requests using the fetch and 
+you cannot send the traditional XMLHttpRequest requests in the service 
+workers 
+
+
+Adding polyfills for the legacy browser support 
+
+Fetch and promises are good browser supports but not supported by all 
+the browsers especially the legacy ones. 
+
+In case of old browsers we cannot make use of fetch requests 
+and will not be able to intercept the response coming from the server 
+
+Here we can make use of the polyfills concept for both fetch and promises 
+
+Link to polyfills on github can guide us for legacy browsers case 
+
+
+If my browser does not have promises implemented in any case 
+
+if(!window.Promise) {
+    //we can add a polyfill in that case 
+    window.Promise = Promise;
+}
+
+This will enable promises and fetch api in legacy browsers as 
+well 
+
+
+Fetch Service workers 
+
+Using fetch we can react to our own fetch events in case 
+of modern browser 
+
+fetch listener is triggered when our html file fetches data 
+for example javascript files or the images 
+
+
+
+
+
